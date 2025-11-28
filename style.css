@@ -112,8 +112,26 @@ footer {
     font-size: 16px;
 }
 
-/* mobile */
 @media (max-width: 600px) {
-    .title { font-size: 36px; }
-    .subtitle { font-size: 16px; }
+
+    /* убираем жрущий ресурсы blur */
+    .card {
+        backdrop-filter: none !important;
+        background: rgba(255,255,255,0.07) !important;
+    }
+
+    /* уменьшаем фон */
+    .background-glow {
+        width: 500px !important;
+        height: 500px !important;
+        filter: blur(60px) !important;
+        top: -150px !important;
+        left: -150px !important;
+    }
+
+    /* отключаем тяжелые тени */
+    .card {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
 }
+
