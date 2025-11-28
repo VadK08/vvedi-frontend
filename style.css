@@ -111,27 +111,41 @@ footer {
     opacity: 0.6;
     font-size: 16px;
 }
-
+/* ======================
+   MOBILE SAFE MODE
+   ====================== */
 @media (max-width: 600px) {
 
-    /* убираем жрущий ресурсы blur */
+    body {
+        background: #0c0e12; /* ровный фон вместо тяжелой сцены */
+    }
+
+    /* убираем тяжёлый фон */
+    .background-glow {
+        display: none !important;
+    }
+
+    /* карточки без blur */
     .card {
         backdrop-filter: none !important;
-        background: rgba(255,255,255,0.07) !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.08) !important;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25) !important;
     }
 
-    /* уменьшаем фон */
-    .background-glow {
-        width: 500px !important;
-        height: 500px !important;
-        filter: blur(60px) !important;
-        top: -150px !important;
-        left: -150px !important;
+    /* упрощаем тени */
+    .logo {
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
     }
 
-    /* отключаем тяжелые тени */
-    .card {
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    /* упрощаем анимации */
+    .scroll-up, .scroll-fade {
+        transition: 0.6s ease !important;
+    }
+
+    /* уменьшаем потребление */
+    * {
+        will-change: auto !important;
     }
 }
 
