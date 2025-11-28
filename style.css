@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background: #0d0f14;
+    background: radial-gradient(circle at 20% 0%, #1c1f26, #0b0d10 70%);
+    color: #ffffff;
+    font-family: -apple-system, Inter, sans-serif;
+    overflow-x: hidden;
+}
+
+/* glowing background */
+.background-glow {
+    position: fixed;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(80,110,255,0.3), transparent 70%);
+    top: -250px;
+    left: -250px;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.hero {
+    padding: 90px 20px 60px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+}
+
+.subtitle {
+    opacity: 0.75;
+    font-size: 18px;
+    max-width: 520px;
+    margin: 0 auto 30px;
+}
+
+/* CTA */
+.cta {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #4f6aff, #2941ff);
+    border-radius: 14px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(50,70,255,0.45);
+    transition: 0.25s;
+}
+.cta:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+.cta-big {
+    font-size: 20px;
+    padding: 18px 40px;
+}
+
+/* sections */
+.section {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section h2 {
+    margin-bottom: 14px;
+    font-size: 28px;
+}
+
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    padding: 24px 28px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    transition: 0.35s ease;
+}
+.card:hover {
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-3px);
+}
+
+ul {
+    opacity: 0.9;
+    line-height: 1.6;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+.inline-cta {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* footer */
+footer {
+    padding: 50px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .title { font-size: 36px; }
+    .subtitle { font-size: 16px; }
+}
