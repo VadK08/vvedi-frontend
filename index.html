@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vvedi — AI для Telegram каналов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<header class="hero fade-in">
+    <img src="assets/logo.png" class="logo">
+    <h1 class="title">Vvedi</h1>
+    <p class="subtitle">
+        ИИ, который пишет посты за вас — красиво, быстро и умно.
+    </p>
+
+    <a href="https://t.me/vveditgk_bot" target="_blank" class="cta cta-big">
+        Добавить бота в Telegram
+    </a>
+</header>
+
+
+<section class="section">
+    <div class="headline scroll-fade">
+        <h2>Что делает бот</h2>
+    </div>
+
+    <div class="card scroll-up">
+        <ul>
+            <li>Пишет посты на любую тему</li>
+            <li>Сохраняет стиль вашего канала</li>
+            <li>Генерирует длинные и короткие тексты</li>
+            <li>Подбирает идеи, когда нет вдохновения</li>
+            <li>Работает как “виртуальный админ”</li>
+        </ul>
+    </div>
+
+    <a href="https://t.me/vveditgk_bot" target="_blank" class="cta inline-cta scroll-fade">
+        Добавить бота
+    </a>
+</section>
+
+
+<section class="section">
+    <div class="headline scroll-fade">
+        <h2>Кому подходит</h2>
+    </div>
+
+    <div class="card scroll-up">
+        <ul>
+            <li>Владельцам Telegram-каналов</li>
+            <li>Креаторам и авторам</li>
+            <li>Маркетологам</li>
+            <li>Новостным / мемным / тематическим каналам</li>
+            <li>Тем, кто хочет активный канал без рутины</li>
+        </ul>
+    </div>
+
+    <a href="https://t.me/vveditgk_bot" target="_blank" class="cta inline-cta scroll-fade">
+        Получить помощь бота
+    </a>
+</section>
+
+
+<section class="section">
+    <div class="headline scroll-fade">
+        <h2>Функции</h2>
+    </div>
+
+    <div class="card scroll-up">
+        <ul>
+            <li>Генерация готовых постов</li>
+            <li>Контроль стиля канала</li>
+            <li>Анализ последних сообщений</li>
+            <li>Подготовка длинных текстов</li>
+            <li>Идеи и сценарии для контента</li>
+        </ul>
+    </div>
+
+    <a href="https://t.me/vveditgk_bot" target="_blank" class="cta inline-cta scroll-fade">
+        Запустить Vvedi
+    </a>
+</section>
+
+
+<footer class="fade-in-slow">
+    Сделано с ❤️ · <b>@vveditgk_bot</b>
+</footer>
+
+<script src="scroll.js"></script>
+
+</body>
+</html>
+
+/* ======================
+   MOBILE FINAL MODE (A)
+   ====================== */
+@media (max-width: 600px) {
+
+    /* Убираем все тяжелые элементы */
+    .background-glow {
+        display: none !important;
+    }
+    .logo {
+        display: none !important;
+    }
+
+    /* Упрощаем фон */
+    body {
+        background: #0e1014 !important;
+        background-image: none !important;
+    }
+
+    /* Упрощаем карточки */
+    .card {
+        backdrop-filter: none !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.07) !important;
+        box-shadow: 0 5px 14px rgba(0,0,0,0.2) !important;
+    }
+
+    /* Герой-секция сдвигается вверх, раз нет аватарки */
+    .hero {
+        padding-top: 40px !important;
+    }
+
+    /* Анимации лёгкие */
+    .scroll-up, .scroll-fade {
+        transition: 0.5s ease-out !important;
+    }
+
+    /* Снижение нагрузки GPU */
+    * {
+        will-change: auto !important;
+    }
+}
