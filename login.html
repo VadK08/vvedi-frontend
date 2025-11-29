@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Vvedi — Вход</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="background-glow"></div>
+
+<div class="hero">
+    <h1 class="title">Вход...</h1>
+    <p class="subtitle">Подождите, выполняется авторизация</p>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+
+    if (!token) {
+        alert("Ошибка: отсутствует токен!");
+    } else {
+        fetch("http://127.0.0.1:8000/auth", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token })
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.session) {
+                localStorage.setItem("session", data.session);
+                window.location.href = "panel.html";
+            } else {
+                alert("Ошибка входа: " + JSON.stringify(data));
+            }
+        })
+        .catch(err => alert("Ошибка соединения: " + err));
+    }
+</script>
+
+</body>
+</html>
